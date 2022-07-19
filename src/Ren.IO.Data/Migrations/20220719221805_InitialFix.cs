@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Ren.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialFix : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace Ren.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(100)", nullable: false),
-                    Documento = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Documento = table.Column<string>(type: "varchar(14)", nullable: false),
                     TipoFornecedor = table.Column<int>(type: "int", nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -30,9 +30,13 @@ namespace Ren.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FornecedorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    varchar100 = table.Column<string>(name: "varchar(100)", type: "varchar(100)", nullable: false),
-                    varchar50 = table.Column<string>(name: "varchar(50)", type: "varchar(100)", nullable: false),
-                    varchar8 = table.Column<string>(name: "varchar(8)", type: "varchar(100)", nullable: false)
+                    Logradouro = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Numero = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Complemento = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Cep = table.Column<string>(type: "varchar(8)", nullable: false),
+                    Bairro = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Cidade = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Estado = table.Column<string>(type: "varchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,7 +55,7 @@ namespace Ren.Data.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FornecedorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(100)", nullable: false),
-                    Descricao = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Descricao = table.Column<string>(type: "varchar(200)", nullable: false),
                     Imagem = table.Column<string>(type: "varchar(100)", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),

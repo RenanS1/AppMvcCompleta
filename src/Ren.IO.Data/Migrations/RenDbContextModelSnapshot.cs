@@ -30,46 +30,34 @@ namespace Ren.Data.Migrations
 
                     b.Property<string>("Bairro")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(100)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Cep")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(8)");
+                        .HasColumnType("varchar(8)");
 
                     b.Property<string>("Cidade")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(100)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Complemento")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(100)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Estado")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(100)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<Guid>("FornecedorId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Logradouro")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(100)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Numero")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.HasKey("Id");
 
@@ -90,7 +78,7 @@ namespace Ren.Data.Migrations
 
                     b.Property<string>("Documento")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(14)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -118,7 +106,7 @@ namespace Ren.Data.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<Guid>("FornecedorId")
                         .HasColumnType("uniqueidentifier");

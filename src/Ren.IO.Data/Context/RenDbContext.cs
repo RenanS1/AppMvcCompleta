@@ -15,12 +15,12 @@ namespace Ren.Data.Context
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(RenDbContext).Assembly);
 
-            foreach (var property in modelBuilder
-                .Model
-                .GetEntityTypes()
-                .SelectMany(e => e.GetProperties())
-                .Where(p => p.ClrType == typeof(string)))
-                property.SetColumnType("varchar(100)");
+            //foreach (var property in modelBuilder
+            //    .Model
+            //    .GetEntityTypes()
+            //    .SelectMany(e => e.GetProperties())
+            //    .Where(p => p.ClrType == typeof(string)))
+            //    property.SetColumnType("varchar(100)");
 
             foreach (var relationship in modelBuilder
                 .Model
