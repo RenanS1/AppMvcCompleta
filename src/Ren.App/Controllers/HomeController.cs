@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Ren.App.Models;
+using Ren.App.ViewModels;
 using System.Diagnostics;
 
 namespace Ren.App.Controllers

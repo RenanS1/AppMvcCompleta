@@ -1,4 +1,4 @@
-namespace Ren.App.Models
+namespace Ren.App.ViewModels
 {
     public class ErrorViewModel
     {

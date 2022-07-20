@@ -10,7 +10,7 @@ using Ren.Data.Context;
 
 namespace Ren.Data.Repository
 {
-    internal class ProdutoRepository : Repository<Produto>, IProdutoRepository
+    public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     {
         public ProdutoRepository(RenDbContext context) : base(context)
         {
